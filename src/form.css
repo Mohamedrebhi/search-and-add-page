@@ -1,0 +1,174 @@
+/* General container styling for background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #d0eefc; /* Sky blue background */
+}
+
+/* Centered title styling */
+.title-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Title styling */
+h2 {
+  color: #333;
+  font-weight: bold;
+  font-size: 2rem; /* Slightly smaller title size */
+  text-transform: uppercase;
+  animation: fadeInUp 0.7s ease;
+}
+
+/* Form container to center the card */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align to the top after title */
+  margin-top: 20px; /* Reduced space between title and form */
+  padding: 0 15px; /* Padding on the sides */
+}
+
+/* Form card styling */
+.form-card {
+  background: #ffffff; /* White card for contrast */
+  padding: 2.5rem; /* Slightly increased padding for spacious layout */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1), 0 8px 25px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px; /* Increased max-width for better readability */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the form fields horizontally */
+  justify-content: center; /* Center the form fields vertically */
+}
+
+/* Form card hover effect */
+.form-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1), 0 16px 35px rgba(0, 0, 0, 0.05);
+}
+
+/* Label styling */
+label {
+  display: block;
+  color: #444;
+  font-size: 1rem; /* Reduced label font size */
+  font-weight: 500;
+  margin-bottom: 0.8rem; /* Increased space between label and field */
+  width: 100%; /* Ensure the label is full width */
+  text-align: left;
+  animation: fadeInUp 0.7s ease;
+}
+
+/* Input styling (3D effect) */
+input[type="text"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.9rem; /* Slightly increased padding */
+  font-size: 1.1rem; /* Increased font size for readability */
+  margin-bottom: 1.2rem; /* Space between fields */
+  border: 1.5px solid #ddd;
+  border-radius: 8px; /* Slightly rounded edges */
+  background-color: #f8f8f8;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Focus state for inputs with subtle effect */
+input[type="text"]:focus,
+input[type="file"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #4c3d70;
+  box-shadow: 0 0 6px rgba(76, 61, 112, 0.5), inset 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Textarea styling for multi-line fields */
+textarea {
+  min-height: 120px; /* Slightly taller default height */
+  resize: vertical; /* Allow vertical resizing only */
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 0.9rem; /* Slightly smaller padding */
+  background-color: #4c3d70; /* Consistent button color */
+  color: #fff;
+  border: none;
+  border-radius: 8px; /* Slightly rounded edges */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem; /* Slightly larger button text */
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 12px rgba(76, 61, 112, 0.3);
+  margin-top: 1rem; /* Space above the button */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #09c5cf;
+  transform: translateY(-2px);
+}
+
+/* Button active state */
+button:active {
+  transform: translateY(1px);
+}
+
+/* Optional: Add some animation for label and header */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* For Phone Number (tel) input */
+input.tel {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* For Email input */
+input.email {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* For Website URL input */
+input.website {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  border: 1.5px solid #ddd;
+  border-radius: 8px;
+  background-color: #f8f8f8;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.05);
+}
