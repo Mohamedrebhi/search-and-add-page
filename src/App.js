@@ -1,20 +1,43 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
-import HomePage from './home';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './Login';
+import Home from './home';
 import SearchPage from './search';
-import FormulairePage from './form'; // Rename based on your actual file
+import FormulairePage from './form';
+import ProtectedRoute from './components/ProtectedRoute';
 
-
-const App = () => {
+function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path="/form" element={<FormulairePage />} />
+        <Route path="/" element={<Login />} />
+        <Route
+          path="/home"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/search"
+          element={
+            <ProtectedRoute>
+              <SearchPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/form"
+          element={
+            <ProtectedRoute>
+              <FormulairePage />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </Router>
   );
-};
+}
 
 export default App;
